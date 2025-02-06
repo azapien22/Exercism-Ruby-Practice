@@ -96,3 +96,18 @@ pp attendee.issue_pass!(42)
 # Checking if the attendee (height 100, pass 42) can ride a ride requiring 120
 pp attendee.allowed_to_ride?(120) 
 # Expected output: false (too short for the ride)
+
+=begin
+
+Explanation of !!pass_id in Ruby
+The double negation (!!) in Ruby is a way to convert a value into a boolean (true or false).
+
+Breaking It Down
+!pass_id → The first ! (not operator) negates the value:
+If pass_id is nil or false, !pass_id becomes true.
+If pass_id is any other value, !pass_id becomes false.
+!!pass_id → The second ! negates it again, converting it into a proper boolean:
+If pass_id was nil or false, it results in false.
+If pass_id had a value (like a number or string), it results in true.
+
+=end
